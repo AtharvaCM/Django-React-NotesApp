@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { render } from "react-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+// as im deploying my react app inside django, some url routing wont work properly
+// so using HashRouter to overcome that issue
 import "./App.css";
 import Header from "./components/Header";
 import NotesListPage from "./pages/NotesListPage";
