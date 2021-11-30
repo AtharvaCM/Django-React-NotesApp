@@ -5,7 +5,7 @@ import { ReactComponent as ArrowLeft } from "../assets/arrow-left.svg";
 // import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const NotePage = (history) => {
+const NotePage = () => {
   const navigate = useNavigate();
 
   let params = useParams();
@@ -26,7 +26,7 @@ const NotePage = (history) => {
   };
 
   let createNote = async () => {
-    fetch(`/api/notes/create/`, {
+    fetch(`/api/notes/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const NotePage = (history) => {
 
   // call to the backend to update database
   let updateNote = async () => {
-    fetch(`/api/notes/${noteId}/update/`, {
+    fetch(`/api/notes/${noteId}/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const NotePage = (history) => {
 
   // code to delete a note
   let deleteNote = async () => {
-    fetch(`/api/notes/${noteId}/delete/`, {
+    fetch(`/api/notes/${noteId}/`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

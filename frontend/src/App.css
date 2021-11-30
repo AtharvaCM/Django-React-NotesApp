@@ -95,6 +95,14 @@ a {
   object-fit: cover;
 }
 
+.app-header .header-link {
+  text-decoration: none !important;
+  color: var(--color-text);
+}
+.app-header .header-link:hover {
+  color: var(--color-main);
+}
+
 .app-body {
   padding: 16px;
 }
