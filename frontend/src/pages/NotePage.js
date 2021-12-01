@@ -9,6 +9,7 @@ const NotePage = () => {
   const navigate = useNavigate();
 
   let params = useParams();
+  console.log("params: ", params);
   let noteId = params.id;
 
   let [note, setNote] = useState(null);
@@ -64,6 +65,8 @@ const NotePage = () => {
     } else if (noteId !== "new") {
       // update
       updateNote();
+    } else if (noteId === "new" && note === null) {
+      console.log("note is null");
     } else if (noteId === "new" && note.body !== null) {
       createNote();
     }
